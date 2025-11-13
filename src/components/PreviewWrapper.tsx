@@ -41,7 +41,7 @@ export default function PreviewWrapper() {
         console.log('Fetching data...');
         const header = await getSingleEntry('header');
         const footer = await getSingleEntry('footer');
-        const page = await getSingleEntry('page', { uid: 'home' });
+        const page = await getSingleEntry('page', { uid: '/' });
         
         console.log('Données récupérées:', { header, footer, page });
         setData({ header, footer, page });
