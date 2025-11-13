@@ -1,0 +1,22 @@
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    border-bottom: 1px solid #ddd;
+  
+    img {
+      height: 40px;
+    }
+  
+    nav {
+      display: flex;
+      gap: 1.5rem;
+  
+      a {
+        font-weight: 500;
+        color: #333;
+      }
+    }
+  }
+  

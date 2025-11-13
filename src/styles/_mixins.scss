@@ -1,0 +1,739 @@
+@use 'variables'as *;
+@use 'sass:map';
+
+@mixin body-01 {
+    font-family: $font-body;
+    font-size: $font-size-body-01;
+    font-style: normal;
+    font-weight: $font-weight-body-regular;
+    line-height: $line-height-body-01;
+    letter-spacing: $letter-spacing-body;
+}
+
+@mixin body-02 {
+    font-family: $font-body;
+    font-size: $font-size-body-02;
+    font-style: normal;
+    font-weight: $font-weight-body-regular;
+    line-height: $line-height-body-02;
+    /* 142.857% */
+    letter-spacing: $letter-spacing-body;
+}
+
+@mixin body-03 {
+    font-family: $font-body;
+    font-size: $font-size-body-03;
+    font-style: normal;
+    font-weight: $font-weight-body-regular;
+    line-height: $line-height-body-03;
+    /* 150% */
+    letter-spacing: $letter-spacing-body;
+}
+
+@mixin body-strong-01 {
+    font-family: $font-body;
+    font-size: $font-size-body-01;
+    font-style: normal;
+    font-weight: $font-weight-body-strong;
+    line-height: $line-height-body-01;
+    /* 133.333% */
+    letter-spacing: $letter-spacing-body;
+}
+
+@mixin body-strong-02 {
+    font-family: $font-body;
+    font-size: $font-size-body-02;
+    font-style: normal;
+    font-weight: $font-weight-body-strong;
+    line-height: $line-height-body-02;
+    /* 142.857% */
+    letter-spacing: $letter-spacing-body;
+}
+
+@mixin body-strong-03 {
+    font-family: $font-body;
+    font-size: $font-size-body-03;
+    font-style: normal;
+    font-weight: $font-weight-body-strong;
+    line-height: $line-height-body-03;
+    /* 150% */
+    letter-spacing: $letter-spacing-body;
+}
+
+@mixin caption-01 {
+    font-family: $font-caption;
+    font-size: $font-size-caption-01;
+    font-style: normal;
+    font-weight: $font-weight-caption-regular;
+    line-height: $line-height-caption-01;
+    /* 140% */
+    letter-spacing: $letter-spacing-caption;
+}
+
+@mixin caption-02 {
+    font-family: $font-caption;
+    font-size: $font-size-caption-02;
+    font-style: normal;
+    font-weight: $font-weight-caption-regular;
+    line-height: $line-height-caption-02;
+    /* 133.333% */
+    letter-spacing: $letter-spacing-caption;
+}
+
+@mixin caption-strong-01 {
+    font-family: $font-caption;
+    font-size: $font-size-caption-01;
+    font-style: normal;
+    font-weight: $font-weight-caption-strong;
+    line-height: $line-height-caption-01;
+    /* 140% */
+    letter-spacing: $letter-spacing-caption;
+}
+
+@mixin caption-strong-02 {
+    font-family: $font-caption;
+    font-size: $font-size-caption-02;
+    font-style: normal;
+    font-weight: $font-weight-caption-strong;
+    line-height: $line-height-caption-02;
+    /* 133.333% */
+    letter-spacing: $letter-spacing-caption;
+}
+
+@mixin link-01 {
+    font-family: $font-link;
+    font-size: $font-size-link-01;
+    font-style: normal;
+    font-weight: $font-weight-link;
+    line-height: $line-height-link-01;
+    /* 133.333% */
+    letter-spacing: $letter-spacing-link;
+    text-decoration-line: underline;
+    cursor: pointer;
+}
+
+@mixin link-02 {
+    font-family: $font-link;
+    font-size: $font-size-link-02;
+    font-style: normal;
+    font-weight: $font-weight-link;
+    line-height: $line-height-link-02;
+    /* 142.857% */
+    letter-spacing: $letter-spacing-link;
+    text-decoration-line: underline;
+    cursor: pointer;
+}
+
+@mixin title-01 {
+    /* title/regular-01 */
+    font-family: $font-title;
+    font-size: $font-size-title-01;
+    font-style: normal;
+    font-weight: $font-weight-title-regular;
+    line-height: $line-height-title-01;
+    letter-spacing: $letter-spacing-title;
+}
+
+@mixin title-02 {
+    font-family: $font-title;
+    font-size: $font-size-title-02;
+    font-style: normal;
+    font-weight: $font-weight-title-regular;
+    line-height: $line-height-title-02;
+    /* 140% */
+    letter-spacing: $letter-spacing-title;
+}
+
+@mixin title-03 {
+    font-family: $font-title;
+    font-size: $font-size-title-03;
+    font-style: normal;
+    font-weight: $font-weight-title-regular;
+    line-height: $line-height-title-03;
+    /* 133.333% */
+    letter-spacing: $letter-spacing-title;
+}
+
+@mixin title-strong-01 {
+    font-family: $font-title;
+    font-size: $font-size-title-01;
+    font-style: normal;
+    font-weight: $font-weight-title-strong;
+    line-height: $line-height-title-01;
+    /* 150% */
+    letter-spacing: $letter-spacing-title;
+}
+
+@mixin title-strong-02 {
+    font-family: $font-title;
+    font-size: $font-size-title-02;
+    font-style: normal;
+    font-weight: $font-weight-title-strong;
+    line-height: $line-height-title-02;
+    /* 140% */
+    letter-spacing: $letter-spacing-title;
+}
+
+@mixin title-strong-03 {
+    font-family: $font-title;
+    font-size: $font-size-title-03;
+    font-style: normal;
+    font-weight: $font-weight-title-strong;
+    line-height: $line-height-title-03;
+    /* 133.333% */
+    letter-spacing: $letter-spacing-title;
+}
+
+@mixin title-alt-01 {
+    font-family: $font-title-alt;
+    font-size: $font-size-title-01;
+    font-style: normal;
+    font-weight: $font-weight-title-alt;
+    line-height: $line-height-title-01;
+    /* 150% */
+    letter-spacing: $letter-spacing-title;
+}
+
+@mixin title-alt-02 {
+    font-family: $font-title-alt;
+    font-size: $font-size-title-02;
+    font-style: normal;
+    font-weight: $font-weight-title-alt;
+    line-height: $line-height-title-02;
+    /* 140% */
+    letter-spacing: $letter-spacing-title;
+}
+
+@mixin title-alt-03 {
+    font-family: $font-title-alt;
+    font-size: $font-size-title-03;
+    font-style: normal;
+    font-weight: $font-weight-title-alt;
+    line-height: $line-height-title-03;
+    /* 133.333% */
+    letter-spacing: $letter-spacing-title;
+}
+
+@mixin heading-01 {
+    font-family: $font-heading;
+    font-size: $font-size-heading-01;
+    font-style: normal;
+    font-weight: $font-weight-heading-strong;
+    line-height: $line-height-heading-01;
+    /* 125% */
+    letter-spacing: $letter-spacing-heading;
+}
+
+@mixin heading-02 {
+    font-family: $font-heading;
+    font-size: $font-size-heading-02;
+    font-style: normal;
+    font-weight: $font-weight-heading-strong;
+    line-height: $line-height-heading-02;
+    /* 120% */
+    letter-spacing: $letter-spacing-heading;
+}
+
+@mixin heading-03 {
+    font-family: $font-heading;
+    font-size: $font-size-heading-03;
+    font-style: normal;
+    font-weight: $font-weight-heading-strong;
+    line-height: $line-height-heading-03;
+    /* 116.667% */
+    letter-spacing: $letter-spacing-heading;
+}
+
+@mixin heading-alt-01 {
+    font-family: $font-heading-alt;
+    font-size: $font-size-heading-01;
+    font-style: normal;
+    font-weight: $font-weight-heading-alt;
+    line-height: $line-height-heading-01;
+    /* 125% */
+    letter-spacing: $letter-spacing-heading;
+}
+
+@mixin heading-alt-02 {
+    font-family: $font-heading-alt;
+    font-size: $font-size-heading-02;
+    font-style: normal;
+    font-weight: $font-weight-heading-alt;
+    line-height: $line-height-heading-02;
+    /* 120% */
+    letter-spacing: $letter-spacing-heading;
+}
+
+@mixin heading-alt-03 {
+    font-family: $font-heading-alt;
+    font-size: $font-size-heading-03;
+    font-style: normal;
+    font-weight: $font-weight-heading-alt;
+    line-height: $line-height-heading-03;
+    /* 116.667% */
+    letter-spacing: $letter-spacing-heading;
+}
+
+@mixin product-01 {
+    font-family: $font-other;
+    font-size: $font-size-product-01;
+    font-style: normal;
+    font-weight: $font-weight-product;
+    line-height: $line-height-product-01;
+    /* 133.333% */
+    letter-spacing: $letter-spacing-product;
+}
+
+@mixin product-02 {
+    font-family: $font-other;
+    font-size: $font-size-product-02;
+    font-style: normal;
+    font-weight: $font-weight-product;
+    line-height: $line-height-product-02;
+    /* 142.857% */
+    letter-spacing: $letter-spacing-product;
+}
+
+@mixin product-03 {
+    font-family: $font-other;
+    font-size: $font-size-product-03;
+    font-style: normal;
+    font-weight: $font-weight-product;
+    line-height: $line-height-collection-02;
+    /* 133.333% */
+    letter-spacing: $letter-spacing-collection;
+}
+
+@mixin product-04 {
+    font-family: $font-other;
+    font-size: $font-size-product-04;
+    font-style: normal;
+    font-weight: $font-weight-product;
+    line-height: $line-height-product-04;
+    /* 133.333% */
+    letter-spacing: $letter-spacing-product;
+}
+
+@mixin collection-01 {
+    font-family: $font-other;
+    font-size: $font-size-collection-01;
+    font-style: normal;
+    font-weight: $font-weight-collection;
+    line-height: $line-height-collection-01;
+    /* 140% */
+    letter-spacing: $letter-spacing-collection;
+}
+
+@mixin collection-02 {
+    font-family: $font-other;
+    font-size: $font-size-collection-02;
+    font-style: normal;
+    font-weight: $font-weight-collection;
+    line-height: $line-height-collection-02;
+    /* 133.333% */
+    letter-spacing: $letter-spacing-collection;
+}
+
+@mixin collection-03 {
+    font-family: $font-other;
+    font-size: $font-size-collection-03;
+    font-style: normal;
+    font-weight: $font-weight-collection;
+    line-height: $line-height-collection-03;
+    /* 142.857% */
+    letter-spacing: $letter-spacing-collection;
+}
+
+@mixin price-01 {
+    font-family: $font-other;
+    font-size: $font-size-price-01;
+    font-style: normal;
+    font-weight: $font-weight-price;
+    line-height: $line-height-price-01;
+    /* 133.333% */
+    letter-spacing: $letter-spacing-price;
+}
+
+@mixin price-02 {
+    font-family: $font-other;
+    font-size: $font-size-price-02;
+    font-style: normal;
+    font-weight: $font-weight-price;
+    line-height: $line-height-price-02;
+    /* 142.857% */
+    letter-spacing: $letter-spacing-price;
+}
+
+@mixin price-03 {
+    font-family: $font-other;
+    font-size: $font-size-price-03;
+    font-style: normal;
+    font-weight: $font-weight-price;
+    line-height: $line-height-price-03;
+    /* 150% */
+    letter-spacing: $letter-spacing-price;
+}
+
+@mixin price-04 {
+    font-family: $font-other;
+    font-size: $font-size-price-04;
+    font-style: normal;
+    font-weight: $font-weight-price;
+    line-height: $line-height-price-04;
+    /* 140% */
+    letter-spacing: $letter-spacing-price;
+}
+
+@mixin price-slashed-01 {
+    font-family: $font-other;
+    font-size: $font-size-price-slashed-01;
+    font-style: normal;
+    font-weight: $font-weight-price-slashed;
+    line-height: $line-height-price-slashed-01;
+    /* 133.333% */
+    letter-spacing: $letter-spacing-price;
+    text-decoration-line: line-through;
+}
+
+@mixin price-slashed-02 {
+    font-family: $font-other;
+    font-size: $font-size-price-slashed-02;
+    font-style: normal;
+    font-weight: $font-weight-price-slashed;
+    line-height: $line-height-price-slashed-02;
+    /* 142.857% */
+    letter-spacing: $letter-spacing-price;
+    text-decoration-line: line-through;
+}
+
+@mixin price-slashed-03 {
+    font-family: $font-other;
+    font-size: $font-size-price-slashed-03;
+    font-style: normal;
+    font-weight: $font-weight-price-slashed;
+    line-height: $line-height-price-slashed-03;
+    /* 150% */
+    letter-spacing: $letter-spacing-price;
+    text-decoration-line: line-through;
+}
+
+@mixin price-slashed-04 {
+    font-family: $font-other;
+    font-size: $font-size-price-slashed-04;
+    font-style: normal;
+    font-weight: $font-weight-price-slashed;
+    line-height: $line-height-price-slashed-04;
+    /* 140% */
+    letter-spacing: $letter-spacing-price;
+    text-decoration-line: line-through;
+}
+
+@mixin navigation-01 {
+    font-family: $font-navigation;
+    font-size: $font-size-navigation-01;
+    font-style: normal;
+    font-weight: $font-weight-navigation;
+    line-height: $line-height-navigation-01;
+    /* 142.857% */
+    letter-spacing: $letter-spacing-navigation;
+}
+
+.body-01 {
+    @include body-01;
+}
+
+.body-02 {
+    @include body-02;
+}
+
+.body-03 {
+    @include body-03;
+}
+
+.body-strong-01 {
+    @include body-strong-01;
+}
+
+.body-strong-02 {
+    @include body-strong-02;
+}
+
+.body-strong-03 {
+    @include body-strong-03;
+}
+
+.caption-01 {
+    @include caption-01;
+}
+
+.caption-02 {
+    @include caption-02;
+}
+
+.caption-strong-01 {
+    @include caption-strong-01;
+}
+
+.caption-strong-02 {
+    @include caption-strong-02;
+}
+
+.link-01 {
+    @include link-01;
+}
+
+.link-02 {
+    @include link-02;
+}
+
+.title-01 {
+    @include title-01;
+}
+
+.title-02 {
+    @include title-02;
+}
+
+.title-03 {
+    @include title-03;
+}
+
+.title-strong-01 {
+    @include title-strong-01;
+}
+
+.title-strong-02 {
+    @include title-strong-02;
+}
+
+.title-strong-03 {
+    @include title-strong-03;
+}
+
+.title-alt-01 {
+    @include title-alt-01;
+}
+
+.title-alt-02 {
+    @include title-alt-02;
+}
+
+.title-alt-03 {
+    @include title-alt-03;
+}
+
+.heading-01 {
+    @include heading-01;
+}
+
+.heading-02 {
+    @include heading-02;
+}
+
+.heading-03 {
+    @include heading-03;
+}
+
+.heading-alt-01 {
+    @include heading-alt-01;
+}
+
+.heading-alt-02 {
+    @include heading-alt-02;
+}
+
+.heading-alt-03 {
+    @include heading-alt-03;
+}
+
+.product-01 {
+    @include product-01;
+}
+
+.product-02 {
+    @include product-02;
+}
+
+.product-03 {
+    @include product-03;
+}
+
+.product-04 {
+    @include product-04;
+}
+
+.collection-01 {
+    @include collection-01;
+}
+
+.collection-02 {
+    @include collection-02;
+}
+
+.collection-03 {
+    @include collection-03;
+}
+
+.price-01 {
+    @include price-01;
+}
+
+.price-02 {
+    @include price-02;
+}
+
+.price-03 {
+    @include price-03;
+}
+
+.price-04 {
+    @include price-04;
+}
+
+.price-slashed-01 {
+    @include price-slashed-01;
+}
+
+.price-slashed-02 {
+    @include price-slashed-02;
+}
+
+.price-slashed-03 {
+    @include price-slashed-03;
+}
+
+.price-slashed-04 {
+    @include price-slashed-04;
+}
+
+.navigation-01 {
+    @include navigation-01;
+}
+
+// Breakpoint viewport sizes and media queries.
+// Breakpoints are defined as a map of (name: minimum width), order from small to large:
+//    (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px, xxl: 1400px)
+// The map defined in the `$grid-breakpoints` global variable is used as the `$breakpoints` argument by default.
+
+// Name of the next breakpoint, or null for the last breakpoint.
+//    >> breakpoint-next(sm)
+//    md
+//    >> breakpoint-next(sm, (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px, xxl: 1400px))
+//    md
+//    >> breakpoint-next(sm, $breakpoint-names: (xs sm md lg xl xxl))
+//    md
+@function breakpoint-next($name, $breakpoints: $grid-breakpoints, $breakpoint-names: map-keys($breakpoints)) {
+    $n: index($breakpoint-names, $name);
+  
+    @if not $n {
+      @error "breakpoint `#{$name}` not found in `#{$breakpoints}`";
+    }
+  
+    @return if($n < length($breakpoint-names), nth($breakpoint-names, $n + 1), null);
+  }
+  
+  // Minimum breakpoint width. Null for the smallest (first) breakpoint.
+  //    >> breakpoint-min(sm, (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px, xxl: 1400px))
+  //    576px
+  @function breakpoint-min($name, $breakpoints: $grid-breakpoints) {
+    $min: map.get($breakpoints, $name);
+  
+    @return if($min != 0, $min, null);
+  }
+  
+  // Maximum breakpoint width.
+  // The maximum value is reduced by 0.02px to work around the limitations of
+  // `min-` and `max-` prefixes and viewports with fractional widths.
+  // See https://www.w3.org/TR/mediaqueries-4/#mq-min-max
+  // Uses 0.02px rather than 0.01px to work around a current rounding bug in Safari.
+  // See https://bugs.webkit.org/show_bug.cgi?id=178261
+  //    >> breakpoint-max(md, (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px, xxl: 1400px))
+  //    767.98px
+  @function breakpoint-max($name, $breakpoints: $grid-breakpoints) {
+    $max: map.get($breakpoints, $name);
+  
+    @return if($max and $max > 0, $max - .02, null);
+  }
+  
+  // Returns a blank string if smallest breakpoint, otherwise returns the name with a dash in front.
+  // Useful for making responsive utilities.
+  //    >> breakpoint-infix(xs, (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px, xxl: 1400px))
+  //    ""  (Returns a blank string)
+  //    >> breakpoint-infix(sm, (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px, xxl: 1400px))
+  //    "-sm"
+  @function breakpoint-infix($name, $breakpoints: $grid-breakpoints) {
+    @return if(breakpoint-min($name, $breakpoints) == null, "", "-#{$name}");
+  }
+  
+  // Media of at least the minimum breakpoint width. No query for the smallest breakpoint.
+  // Makes the @content apply to the given breakpoint and wider.
+  @mixin media-breakpoint-up($name, $breakpoints: $grid-breakpoints) {
+    $min: breakpoint-min($name, $breakpoints);
+  
+    @if $min {
+      @media (min-width: $min) {
+        @content;
+      }
+    } @else {
+      @content;
+    }
+  }
+  
+  // Media of at most the maximum breakpoint width. No query for the largest breakpoint.
+  // Makes the @content apply to the given breakpoint and narrower.
+  @mixin media-breakpoint-down($name, $breakpoints: $grid-breakpoints) {
+    $max: breakpoint-max($name, $breakpoints);
+  
+    @if $max {
+      @media (max-width: $max) {
+        @content;
+      }
+    } @else {
+      @content;
+    }
+  }
+  
+  // Media that spans multiple breakpoint widths.
+  // Makes the @content apply between the min and max breakpoints
+  @mixin media-breakpoint-between($lower, $upper, $breakpoints: $grid-breakpoints) {
+    $min: breakpoint-min($lower, $breakpoints);
+    $max: breakpoint-max($upper, $breakpoints);
+  
+    @if $min != null and $max != null {
+      @media (min-width: $min) and (max-width: $max) {
+        @content;
+      }
+    } @else if $max == null {
+      @include media-breakpoint-up($lower, $breakpoints) {
+        @content;
+      }
+    } @else if $min == null {
+      @include media-breakpoint-down($upper, $breakpoints) {
+        @content;
+      }
+    }
+  }
+  
+  // Media between the breakpoint's minimum and maximum widths.
+  // No minimum for the smallest breakpoint, and no maximum for the largest one.
+  // Makes the @content apply only to the given breakpoint, not viewports any wider or narrower.
+  @mixin media-breakpoint-only($name, $breakpoints: $grid-breakpoints) {
+    $min: breakpoint-min($name, $breakpoints);
+    $next: breakpoint-next($name, $breakpoints);
+    $max: breakpoint-max($next, $breakpoints);
+  
+    @if $min != null and $max != null {
+      @media (min-width: $min) and (max-width: $max) {
+        @content;
+      }
+    } @else if $max == null {
+      @include media-breakpoint-up($name, $breakpoints) {
+        @content;
+      }
+    } @else if $min == null {
+      @include media-breakpoint-down($next, $breakpoints) {
+        @content;
+      }
+    }
+  }
+  

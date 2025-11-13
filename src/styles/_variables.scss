@@ -1,0 +1,501 @@
+
+@use "bases" as *;
+@use 'sass:map';
+
+// stylelint-disable color-no-hex
+
+// colors
+$color-palettes-blue-blue-10: #d6efff !default;
+$color-palettes-blue-blue-20: #ade0ff !default;
+$color-palettes-blue-blue-30: #85d0ff !default;
+$color-palettes-blue-blue-40: #5cc1ff !default;
+$color-palettes-blue-blue-50: #33b1ff !default;
+$color-palettes-blue-blue-60: #2b94d5 !default;
+$color-palettes-blue-blue-70: #2276aa !default;
+$color-palettes-blue-blue-80: #1a5980 !default;
+$color-palettes-blue-blue-90: #113b55 !default;
+$color-palettes-blue-blue-100: #091e2b !default;
+$color-palettes-green-green-10: #d9f2e0 !default;
+$color-palettes-green-green-20: #b3e5c1 !default;
+$color-palettes-green-green-30: #8ed8a3 !default;
+$color-palettes-green-green-40: #68cb84 !default;
+$color-palettes-green-green-50: #42be65 !default;
+$color-palettes-green-green-60: #379e54 !default;
+$color-palettes-green-green-70: #2c7f43 !default;
+$color-palettes-green-green-80: #215f33 !default;
+$color-palettes-green-green-90: #163f22 !default;
+$color-palettes-green-green-100: #0b2011 !default;
+$color-palettes-grey-grey-10: #f2f4f8 !default;
+$color-palettes-grey-grey-20: #dde1e6 !default;
+$color-palettes-grey-grey-30: #c1c7cd !default;
+$color-palettes-grey-grey-40: #a2a9b0 !default;
+$color-palettes-grey-grey-50: #878d96 !default;
+$color-palettes-grey-grey-60: #697077 !default;
+$color-palettes-grey-grey-70: #4d5358 !default;
+$color-palettes-grey-grey-80: #343a3f !default;
+$color-palettes-grey-grey-90: #21272a !default;
+$color-palettes-grey-grey-100: #121619 !default;
+$color-palettes-khaki-khaki-10: #fff !default;
+$color-palettes-khaki-khaki-20: #fff !default;
+$color-palettes-khaki-khaki-30: #fff !default;
+$color-palettes-khaki-khaki-40: #fff !default;
+$color-palettes-khaki-khaki-50: #fff !default;
+$color-palettes-khaki-khaki-60: #fff !default;
+$color-palettes-khaki-khaki-70: #fff !default;
+$color-palettes-khaki-khaki-80: #fff !default;
+$color-palettes-khaki-khaki-90: #fff !default;
+$color-palettes-khaki-khaki-100: #fff !default;
+$color-palettes-loyalty-loyalty-01: #e0144c !default;
+$color-palettes-loyalty-loyalty-02: #fff !default;
+$color-palettes-loyalty-loyalty-03: #e0144c !default;
+$color-palettes-loyalty-loyalty-04: #fff !default;
+$color-palettes-loyalty-loyalty-05: #e0144c !default;
+$color-palettes-loyalty-loyalty-background-01: #fff8f8 !default;
+$color-palettes-loyalty-loyalty-background-02: #fff !default;
+$color-palettes-loyalty-loyalty-background-03: #fdecee !default;
+$color-palettes-loyalty-loyalty-background-04: #fff !default;
+$color-palettes-loyalty-loyalty-background-05: #ffdee2 !default;
+$color-palettes-loyalty-loyalty-gradient-01: #fdecee !default;
+$color-palettes-loyalty-loyalty-gradient-02: #fff !default;
+$color-palettes-loyalty-loyalty-gradient-03: #ffdee2 !default;
+$color-palettes-loyalty-loyalty-gradient-04: #fff !default;
+$color-palettes-loyalty-loyalty-gradient-05: #fcd1d5 !default;
+$color-palettes-orange-orange-10: #fbddda !default;
+$color-palettes-orange-orange-20: #f7bbb5 !default;
+$color-palettes-orange-orange-30: #f3988f !default;
+$color-palettes-orange-orange-40: #ef766a !default;
+$color-palettes-orange-orange-50: #eb5445 !default;
+$color-palettes-orange-orange-60: #c4463a !default;
+$color-palettes-orange-orange-70: #9d382e !default;
+$color-palettes-orange-orange-80: #762a23 !default;
+$color-palettes-orange-orange-90: #4e1c17 !default;
+$color-palettes-orange-orange-100: #270e0c !default;
+$color-palettes-other-colors-black: #0b1215 !default;
+$color-palettes-other-colors-wecare-01: #9ab2a2 !default;
+$color-palettes-other-colors-wecare-02: #E1E8E3 !default;
+$color-palettes-other-colors-white: #fdfdfd !default;
+$color-palettes-pink-pink-10: #f9d0db !default;
+$color-palettes-pink-pink-20: #f3a1b7 !default;
+$color-palettes-pink-pink-30: #ec7294 !default;
+$color-palettes-pink-pink-40: #e64370 !default;
+$color-palettes-pink-pink-50: #e0144c !default;
+$color-palettes-pink-pink-60: #bb113f !default;
+$color-palettes-pink-pink-70: #950d33 !default;
+$color-palettes-pink-pink-80: #700a26 !default;
+$color-palettes-pink-pink-90: #4b0719 !default;
+$color-palettes-pink-pink-100: #25030d !default;
+$color-palettes-purple-purple-10: #fff !default;
+$color-palettes-purple-purple-20: #fff !default;
+$color-palettes-purple-purple-30: #fff !default;
+$color-palettes-purple-purple-40: #fff !default;
+$color-palettes-purple-purple-50: #fff !default;
+$color-palettes-purple-purple-60: #fff !default;
+$color-palettes-purple-purple-70: #fff !default;
+$color-palettes-purple-purple-80: #fff !default;
+$color-palettes-purple-purple-90: #fff !default;
+$color-palettes-purple-purple-100: #fff !default;
+$color-palettes-red-red-10: #fff1f1 !default;
+$color-palettes-red-red-20: #ffd7d9 !default;
+$color-palettes-red-red-30: #ffb3b8 !default;
+$color-palettes-red-red-40: #ff8389 !default;
+$color-palettes-red-red-50: #fa4d56 !default;
+$color-palettes-red-red-60: #da1e28 !default;
+$color-palettes-red-red-70: #a2191f !default;
+$color-palettes-red-red-80: #750e13 !default;
+$color-palettes-red-red-90: #520408 !default;
+$color-palettes-red-red-100: #2d0709 !default;
+$color-palettes-yellow-yellow-10: #fcf3d1 !default;
+$color-palettes-yellow-yellow-20: #f9e7a4 !default;
+$color-palettes-yellow-yellow-30: #f7da76 !default;
+$color-palettes-yellow-yellow-40: #f4ce49 !default;
+$color-palettes-yellow-yellow-50: #f1c21b !default;
+$color-palettes-yellow-yellow-60: #c9a217 !default;
+$color-palettes-yellow-yellow-70: #a18112 !default;
+$color-palettes-yellow-yellow-80: #79610e !default;
+$color-palettes-yellow-yellow-90: #504109 !default;
+$color-palettes-yellow-yellow-100: #282005 !default;
+$core-colors-black: $color-palettes-other-colors-black !default;
+$core-colors-brand-01: $color-palettes-other-colors-black !default;
+$core-colors-brand-02: $color-palettes-other-colors-black !default;
+$core-colors-brand-03: $color-palettes-pink-pink-10 !default;
+$core-colors-error: $color-palettes-red-red-50 !default;
+$core-colors-grey-01: $color-palettes-grey-grey-10 !default;
+$core-colors-grey-02: $color-palettes-grey-grey-20 !default;
+$core-colors-grey-03: $color-palettes-grey-grey-40 !default;
+$core-colors-grey-04: $color-palettes-grey-grey-60 !default;
+$core-colors-grey-05: $color-palettes-grey-grey-90 !default;
+$core-colors-information: $color-palettes-blue-blue-50 !default;
+$core-colors-payment: $color-palettes-other-colors-black !default;
+$core-colors-payment-hover: $color-palettes-grey-grey-80 !default;
+$core-colors-sales-01: $color-palettes-orange-orange-50 !default;
+$core-colors-sales-02: $color-palettes-orange-orange-10 !default;
+$core-colors-success: $color-palettes-green-green-50 !default;
+$core-colors-warning: $color-palettes-yellow-yellow-50 !default;
+$core-colors-wecare-01: $color-palettes-other-colors-wecare-01 !default;
+$core-colors-wecare-02: $color-palettes-other-colors-wecare-02 !default;
+$core-colors-white: $color-palettes-other-colors-white !default;
+$core-colors-red-01: $color-palettes-red-red-10 !default;
+
+// Finale naming of cores variables
+$brand-01: $core-colors-brand-01 !default;
+$brand-02: $core-colors-brand-02 !default;
+$brand-03: $core-colors-brand-03 !default;
+$payment: $core-colors-payment !default;
+$payment-hover: $core-colors-payment-hover !default;
+$sales-01: $core-colors-sales-01 !default;
+$sales-02: $core-colors-sales-02 !default;
+$loyalty-01: $color-palettes-loyalty-loyalty-01 !default;
+$loyalty-background-01: $color-palettes-loyalty-loyalty-background-01 !default;
+$loyalty-gradient-01: linear-gradient(243deg, $loyalty-background-01 0%, $color-palettes-loyalty-loyalty-gradient-01 100%) !default;
+$loyalty-02: $color-palettes-loyalty-loyalty-02 !default;
+$loyalty-background-02: $color-palettes-loyalty-loyalty-background-02 !default;
+$loyalty-gradient-02: linear-gradient(243deg, $loyalty-background-02 0%, $color-palettes-loyalty-loyalty-gradient-02 100%) !default;
+$loyalty-03: $color-palettes-loyalty-loyalty-03 !default;
+$loyalty-background-03: $color-palettes-loyalty-loyalty-background-03 !default;
+$loyalty-gradient-03: linear-gradient(243deg, $loyalty-background-03 0%, $color-palettes-loyalty-loyalty-gradient-03 100%) !default;
+$loyalty-04: $color-palettes-loyalty-loyalty-04 !default;
+$loyalty-background-04: $color-palettes-loyalty-loyalty-background-04 !default;
+$loyalty-gradient-04: linear-gradient(243deg, $loyalty-background-04 0%, $color-palettes-loyalty-loyalty-gradient-04 100%) !default;
+$loyalty-05: $color-palettes-loyalty-loyalty-05 !default;
+$loyalty-background-05: $color-palettes-loyalty-loyalty-background-05 !default;
+$loyalty-gradient-05: linear-gradient(243deg, $loyalty-background-05 0%, $color-palettes-loyalty-loyalty-gradient-05 100%) !default;
+$wecare-01: $core-colors-wecare-01 !default;
+$wecare-02: $core-colors-wecare-02 !default;
+$app-01: $core-colors-white !default;
+$app-02: $core-colors-white !default;
+$onboarding-01: $core-colors-white !default;
+$onboarding-02: $core-colors-white !default;
+$onboarding-03: $core-colors-white !default;
+$success: $core-colors-success !default;
+$warning: $core-colors-warning !default;
+$error: $core-colors-error !default;
+$information: $core-colors-information !default;
+$white: $core-colors-white !default;
+$grey-01: $core-colors-grey-01 !default;
+$grey-02: $core-colors-grey-02 !default;
+$grey-03: $core-colors-grey-03 !default;
+$grey-04: $core-colors-grey-04 !default;
+$grey-05: $core-colors-grey-05 !default;
+$black: $core-colors-black !default;
+$red-01: $core-colors-red-01 !default;
+$colors: (
+    "brand-01": $brand-01,
+    "brand-02": $brand-02,
+    "brand-03": $brand-03,
+    "payment": $payment,
+    "payment-hover": $payment-hover,
+    "sales-01": $sales-01,
+    "sales-02": $sales-02,
+    "loyalty-01": $loyalty-01,
+    "loyalty-background-01": $loyalty-background-01,
+    "loyalty-02": $loyalty-02,
+    "loyalty-background-02": $loyalty-background-02,
+    "loyalty-03": $loyalty-03,
+    "loyalty-background-03": $loyalty-background-03,
+    "loyalty-04": $loyalty-04,
+    "loyalty-background-04": $loyalty-background-04,
+    "loyalty-05": $loyalty-05,
+    "loyalty-background-05": $loyalty-background-05,
+    "wecare-01": $wecare-01,
+    "wecare-02": $wecare-02,
+    "app-01": $app-01,
+    "app-02": $app-02,
+    "onboarding-01": $onboarding-01,
+    "onboarding-02": $onboarding-02,
+    "onboarding-03": $onboarding-03,
+    "success": $success,
+    "warning": $warning,
+    "error": $error,
+    "information": $information,
+    "white": $white,
+    "grey-01": $grey-01,
+    "grey-02": $grey-02,
+    "grey-03": $grey-03,
+    "grey-04": $grey-04,
+    "grey-05": $grey-05,
+    "black": $black
+);
+$gradients: (
+    "loyalty-gradient-01": $loyalty-gradient-01,
+    "loyalty-gradient-02": $loyalty-gradient-02,
+    "loyalty-gradient-03": $loyalty-gradient-03,
+    "loyalty-gradient-04": $loyalty-gradient-04,
+    "loyalty-gradient-05": $loyalty-gradient-05
+);
+
+// border
+$brand-border: $border-bases-border-1 !default;
+$border-width: $brand-border !default;
+$border-widths: (
+    'none': $border-bases-border-none,
+    'half': $border-bases-border-half,
+    1: $border-bases-border-1,
+    2: $border-bases-border-2,
+    4: $border-bases-border-4,
+    8: $border-bases-border-8
+) !default;
+$border-style: solid !default;
+$border-color: $grey-03 !default;
+$border-color-translucent: rgba($black, .175) !default;
+
+// stylelint-disable color-no-hex
+$shadow-01: 0 6px 16px rgba(#000, .10) !default;
+$shadow-02: 0 12px 22px rgba(#000, .10) !default;
+$shadow-03: 0 24px 34px rgba(#000, .10) !default;
+$blur-01: 4px !default;
+$trEase: ease-in-out !default;
+$trBounce: cubic-bezier(.5,1.6,.45,.7) !default;
+$trLinear: linear !default;
+
+.shadow-01 {
+    box-shadow: $shadow-01;
+}
+
+.shadow-02 {
+    box-shadow: $shadow-02;
+}
+
+.shadow-03 {
+    box-shadow: $shadow-03;
+}
+
+.blur-01 {
+    filter: blur($blur-01);
+}
+
+$spacer: $spacer-bases-spacer-16;
+$spacers: (
+    0: $spacer-bases-spacer-none,
+    2: $spacer-bases-spacer-2,
+    4: $spacer-bases-spacer-4,
+    6: $spacer-bases-spacer-6,
+    8: $spacer-bases-spacer-8,
+    10: $spacer-bases-spacer-10,
+    12: $spacer-bases-spacer-12,
+    16: $spacer-bases-spacer-16,
+    20: $spacer-bases-spacer-20,
+    24: $spacer-bases-spacer-24,
+    28: $spacer-bases-spacer-28,
+    32: $spacer-bases-spacer-32,
+    40: $spacer-bases-spacer-40,
+    48: $spacer-bases-spacer-48,
+    56: $spacer-bases-spacer-56,
+    64: $spacer-bases-spacer-64,
+    80: $spacer-bases-spacer-80,
+    96: $spacer-bases-spacer-96,
+    120: $spacer-bases-spacer-120,
+    160: $spacer-bases-spacer-160,
+    240: $spacer-bases-spacer-240,
+    320: $spacer-bases-spacer-320,
+    400: $spacer-bases-spacer-400
+) !default;
+$spacer-0: map.get($spacers, 0);
+$spacer-2: map.get($spacers, 2);
+$spacer-4: map.get($spacers, 4);
+$spacer-6: map.get($spacers, 6);
+$spacer-8: map.get($spacers, 8);
+$spacer-10: map.get($spacers, 10);
+$spacer-12: map.get($spacers, 12);
+$spacer-16: map.get($spacers, 16);
+$spacer-20: map.get($spacers, 20);
+$spacer-24: map.get($spacers, 24);
+$spacer-28: map.get($spacers, 28);
+$spacer-32: map.get($spacers, 32);
+$spacer-40: map.get($spacers, 40);
+$spacer-48: map.get($spacers, 48);
+$spacer-56: map.get($spacers, 56);
+$spacer-64: map.get($spacers, 64);
+$spacer-80: map.get($spacers, 80);
+$spacer-96: map.get($spacers, 96);
+$spacer-120: map.get($spacers, 120);
+$spacer-160: map.get($spacers, 160);
+$spacer-240: map.get($spacers, 240);
+$spacer-320: map.get($spacers, 320);
+$spacer-400: map.get($spacers, 400);
+$grid-breakpoints: (
+    xs: 0,
+    sm: 600px,
+    md: 900px,
+    xl: 1200px,
+    xxl: 1800px
+) !default;
+$container-max-widths: (
+    sm: 568px,
+    md: 852px,
+    xl: 1120px,
+    xxl: 1640px
+) !default;
+$grid-gutter-widths: (
+    xs: $spacer-16,
+    sm: $spacer-24,
+    md: $spacer-40,
+    xl: $spacer-80,
+    xxl: $spacer-160
+) !default;
+$grid-columns: 12 !default;
+$grid-gutter-width: $spacer-16 !default;
+$grid-gutter-width-sm: $spacer-24 !default;
+$grid-gutter-width-md: $spacer-40 !default;
+$grid-gutter-width-xl: $spacer-80 !default;
+$grid-gutter-width-xxl: $spacer-160 !default;
+$grid-row-columns: 6 !default;
+$container-padding-x: $grid-gutter-width !default;
+$grid-gap-width-sm: $spacer-16 !default;
+$grid-gap-width-xl: $spacer-24 !default;
+$grid-gap-width-xxl: $spacer-32 !default;
+$grid-gap-width: $grid-gap-width-sm !default;
+
+
+$position-values: (
+    0: 0,
+    50: 50%,
+    100: 100%
+) !default;
+$body-bg: $white !default;
+$body-color: $brand-01 !default;
+$body-text-align: null !default;
+$transition-base: all .2s ease-in-out !default;
+$transition-fade: opacity .15s linear !default;
+$transition-collapse: height .35s ease !default;
+$transition-collapse-width: width .35s ease !default;
+$zindex-dropdown: 1000 !default;
+$zindex-header: 1001 !default;
+$zindex-sticky: 1020 !default;
+$zindex-fixed: 1030 !default;
+$zindex-offcanvas-backdrop: 1040 !default;
+$zindex-popover: 1070 !default;
+$zindex-tooltip: 1080 !default;
+$zindex-offcanvas: 1110 !default;
+$zindex-toast: 1200 !default;
+$offcanvas-horizontal-width: 40% !default;
+$offcanvas-vertical-height: 30vh !default;
+$offcanvas-transition-duration: .3s !default;
+$offcanvas-border-width: $border-width !default;
+$offcanvas-bg-color: $white !default;
+$offcanvas-color: $brand-01 !default;
+$offcanvas-box-shadow: $shadow-02 !default;
+$offcanvas-backdrop-bg: $black !default;
+$offcanvas-backdrop-opacity: .2 !default;
+$toast-max-width: 480px !default;
+$toast-padding-x: .75rem !default;
+$toast-padding-y: .5rem !default;
+$toast-background-color: $white !default;
+$toast-border-width: 0 !default;
+$toast-box-shadow: $shadow-01 !default;
+$headerHeight: 72px !default;
+$headerHeightMobile: 56px !default;
+$floatingBarHeight: 35px !default;
+$headerTopbarHeight: 64px !default;
+$headerTopbarHeightMobile: 56px !default;
+$componentFullHeight: calc(100vh - #{$headerHeight}) !default;
+$componentFullHeightFloatingBar: calc(100vh - #{$headerHeight} - #{$floatingBarHeight}) !default;
+$componentFullHeightFloatingBarWithoutHeader: calc(100vh - #{$floatingBarHeight}) !default;
+$componentFullHeightMobile: calc((var(--100dvh)) - #{$headerHeightMobile}) !default;
+$componentFullHeightMobileFloatingBar: calc((var(--100dvh)) - #{$headerHeightMobile} - #{$floatingBarHeight}) !default;
+$componentHeightBig: 600px !default;
+$componentHeightBigMobile: 560px !default;
+$componentHeightMedium: 300px !default;
+$componentHeightMediumMobile: 310px !default;
+$componentHeightSmall: 150px !default;
+$componentHeightSmallMobile: 170px !default;
+$componentHeightXSmallMobile: 215px !default;
+$componentHeightMobileGlobal: 270px !default;
+$burgerMenuHeaderHeight: 55px !default;
+$burgerMenuNavHeight: 40px !default;
+$burgerMenuFooterHeight: 64px !default;
+$searchBarHeaderHeight: 40px !default;
+
+// Typography
+$font-size-caption-01: $typography-bases-font-size-2xs !default;
+$font-size-collection-01: $typography-bases-font-size-2xs !default;
+$font-size-body-01: $typography-bases-font-size-xs !default;
+$font-size-caption-02: $typography-bases-font-size-xs !default;
+$font-size-collection-02: $typography-bases-font-size-xs !default;
+$font-size-link-01: $typography-bases-font-size-xs !default;
+$font-size-price-01: $typography-bases-font-size-xs !default;
+$font-size-price-slashed-01: $typography-bases-font-size-xs !default;
+$font-size-product-01: $typography-bases-font-size-xs !default;
+$font-size-body-02: $typography-bases-font-size-sm !default;
+$font-size-collection-03: $typography-bases-font-size-sm !default;
+$font-size-link-02: $typography-bases-font-size-sm !default;
+$font-size-price-02: $typography-bases-font-size-sm !default;
+$font-size-price-slashed-02: $typography-bases-font-size-sm !default;
+$font-size-product-02: $typography-bases-font-size-sm !default;
+$font-size-body-03: $typography-bases-font-size-md !default;
+$font-size-price-03: $typography-bases-font-size-md !default;
+$font-size-price-slashed-03: $typography-bases-font-size-md !default;
+$font-size-product-03: $typography-bases-font-size-md !default;
+$font-size-title-01: $typography-bases-font-size-md !default;
+$font-size-price-04: $typography-bases-font-size-lg !default;
+$font-size-price-slashed-04: $typography-bases-font-size-lg !default;
+$font-size-title-02: $typography-bases-font-size-lg !default;
+$font-size-product-04: $typography-bases-font-size-xl !default;
+$font-size-title-03: $typography-bases-font-size-xl !default;
+$font-size-heading-01: $typography-bases-font-size-2xl !default;
+$font-size-heading-02: $typography-bases-font-size-3xl !default;
+$font-size-heading-03: $typography-bases-font-size-4xl !default;
+$font-size-navigation-01: $typography-bases-font-size-sm !default;
+$letter-spacing-body: $typography-bases-letter-spacing-normal !default;
+$letter-spacing-caption: $typography-bases-letter-spacing-normal !default;
+$letter-spacing-collection: $typography-bases-letter-spacing-normal !default;
+$letter-spacing-heading: $typography-bases-letter-spacing-normal !default;
+$letter-spacing-link: $typography-bases-letter-spacing-normal !default;
+$letter-spacing-price: $typography-bases-letter-spacing-normal !default;
+$letter-spacing-product: $typography-bases-letter-spacing-normal !default;
+$letter-spacing-title: $typography-bases-letter-spacing-normal !default;
+$letter-spacing-navigation: $typography-bases-letter-spacing-normal !default;
+$line-height-caption-01: $typography-bases-line-height-2xs !default;
+$line-height-collection-01: $typography-bases-line-height-2xs !default;
+$line-height-body-01: $typography-bases-line-height-xs !default;
+$line-height-caption-02: $typography-bases-line-height-xs !default;
+$line-height-collection-02: $typography-bases-line-height-xs !default;
+$line-height-link-01: $typography-bases-line-height-xs !default;
+$line-height-price-01: $typography-bases-line-height-xs !default;
+$line-height-price-slashed-01: $typography-bases-line-height-xs !default;
+$line-height-product-01: $typography-bases-line-height-xs !default;
+$line-height-body-02: $typography-bases-line-height-sm !default;
+$line-height-collection-03: $typography-bases-line-height-sm !default;
+$line-height-link-02: $typography-bases-line-height-sm !default;
+$line-height-price-02: $typography-bases-line-height-sm !default;
+$line-height-price-slashed-02: $typography-bases-line-height-sm !default;
+$line-height-product-02: $typography-bases-line-height-sm !default;
+$line-height-body-03: $typography-bases-line-height-md !default;
+$line-height-price-03: $typography-bases-line-height-md !default;
+$line-height-price-slashed-03: $typography-bases-line-height-md !default;
+$line-height-product-03: $typography-bases-line-height-md !default;
+$line-height-title-01: $typography-bases-line-height-md !default;
+$line-height-price-04: $typography-bases-line-height-lg !default;
+$line-height-price-slashed-04: $typography-bases-line-height-lg !default;
+$line-height-title-02: $typography-bases-line-height-lg !default;
+$line-height-product-04: $typography-bases-line-height-xl !default;
+$line-height-title-03: $typography-bases-line-height-xl !default;
+$line-height-heading-01: $typography-bases-line-height-2xl !default;
+$line-height-heading-02: $typography-bases-line-height-3xl !default;
+$line-height-heading-03: $typography-bases-line-height-4xl !default;
+$line-height-navigation-01: $typography-bases-line-height-sm !default;
+$font-library-brand-font: 'Baton Turbo', arial !default;
+$font-library-brand-font-alt: 'Recoleta', arial !default;
+$font-body: $font-library-brand-font !default;
+$font-caption: $font-library-brand-font !default;
+$font-heading: $font-library-brand-font !default;
+$font-heading-alt: $font-library-brand-font-alt !default;
+$font-link: $font-library-brand-font !default;
+$font-other: $font-library-brand-font !default;
+$font-title: $font-library-brand-font !default;
+$font-title-alt: $font-library-brand-font-alt !default;
+$font-navigation: $font-library-brand-font !default;
+$font-weight-body-regular: $typography-bases-font-weight-regular !default;
+$font-weight-body-strong: $typography-bases-font-weight-medium !default;
+$font-weight-caption-regular: $typography-bases-font-weight-regular !default;
+$font-weight-caption-strong: $typography-bases-font-weight-medium !default;
+$font-weight-collection: $typography-bases-font-weight-regular !default;
+$font-weight-heading-alt: $typography-bases-font-weight-bold !default;
+$font-weight-heading-strong: $typography-bases-font-weight-bold !default;
+$font-weight-link: $typography-bases-font-weight-regular !default;
+$font-weight-price: $typography-bases-font-weight-regular !default;
+$font-weight-price-slashed: $typography-bases-font-weight-regular !default;
+$font-weight-product: $typography-bases-font-weight-regular !default;
+$font-weight-title-alt: $typography-bases-font-weight-bold !default;
+$font-weight-title-regular: $typography-bases-font-weight-regular !default;
+$font-weight-title-strong: $typography-bases-font-weight-bold !default;
+$font-weight-navigation: $typography-bases-font-weight-regular !default;
